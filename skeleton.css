@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 550px) {
   h1 { font-size: 2em; }
   h2 { font-size: 2rem; }
-  h3 { font-size: 1.9rem; }
+  h3 { font-size: 1.1rem; }
   h4 { font-size: 1.7rem; }
   h5 { font-size: 1.5rem; }
   h6 { font-size: 1.3rem; }

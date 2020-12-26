@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="skeleton.css">
 
   <link rel="stylesheet" href="style.css">
+
   <script src="editor.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
@@ -47,15 +48,15 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    
-<div class="container">
+<div>
+    <div class="container" style="padding-bottom: 7em; background-color: rgb(255, 255, 255); margin-top: -2em; padding-top: 4.8em; border-radius: 40px; padding-left: 1em;">
         <div class="row">
-            <div class="one-half column" style=" z-index: 1; ; margin-top: 0%;"> 
-                <h3 id="savedText" class="lang" key="saved" > </h3>
+            <div class="" style=" z-index: 1; ; margin-top: 0%;"> 
+                <h3 id="savedText" class="lang" key="saved"  style="float: right;"> </h3>
 
-                <h3 id="wallet"></h3><br>
+                <h3 id="wallet"></h3>
                
-                <h3 id="price"></h3><br><br>
+                <h3 id="price"></h3><hr>
                     <div id="meta" style="display:none; text-transform: uppercase;"> 
                         
                         <p id="time" style="font-family: Arial, Helvetica, sans-serif;"> <span id="lastUpdated"></span></p>
@@ -137,24 +138,24 @@
                         function renderArticle(authorPub, articleHash, audienceType) {
                             if (audienceType == 'create') {
                                 var editorTitle = new MediumEditor('#title', {placeholder: {
-                                    text: 'STORE',
+                                    text: 'Store',
                                     hideOnClick: false
                                 }, spellcheck: false, disableReturn: true,toolbar: false});
                                 var editorAuthor = new MediumEditor('#author', {placeholder: {
-                                    text: 'NAME',
+                                    text: 'Name',
                                     hideOnClick: false
                                 }, spellcheck: false, disableReturn: true,toolbar: false});
                                 var editorWallet = new MediumEditor('#wallet', {placeholder: {
-                                    text: 'WALLET ADDRESS',
+                                    text: 'Payment Address',
                                     hideOnClick: false
                                 }, spellcheck: false, disableReturn: true,toolbar: false});
                                 var editorPrice = new MediumEditor('#price', {placeholder: {
-                                    text: 'AMOUNT',
+                                    text: 'Amount',
                                     hideOnClick: false
                                 }, spellcheck: false, disableReturn: true,toolbar: false});
                                 var editorContent = new MediumEditor('#content', {
                                     placeholder: {
-                                        text: 'PRODUCT',
+                                        text: 'Product',
                                         hideOnClick: false
                                     }, 
                                     spellcheck: true,
@@ -309,33 +310,56 @@
     
     
             </div>
+
+
+
+            <script type="text/javascript">
+                function showHideDiv(ele) {
+                    var srcElement = document.getElementById(ele);
+                    if (srcElement != null) {
+                        if (srcElement.style.display == "block") {
+                            srcElement.style.display = 'none';
+                        }
+                        else {
+                            srcElement.style.display = 'block';
+                        }
+                        return false;
+                    }
+                }
+            </script>
+
+
+            <input type="button" value="QR" onClick="showHideDiv('divMsg')"/>
+            <div id="divMsg" display:none">
+            
+
+
+
+                <div class="" style="z-index: 1;">
+                    
     
-            <div class="one-half  column" style="z-index: 1;">
-                
-                <!-- <h1  style="font-family: arial; ; font-size: 4em; opacity: 0.2;" > <a href="https://github.com/libensveto/site">>HOST</a> </h1>       -->
-                <div class="boxed">
-                    <a href="https://github.com/libensveto/site" >
-                        <img src="github.png" alt="" style="width: 100px; height: 100px;">
-                    </a> 
-                    <canvas id="qr-code" style="align-content: center  ;"></canvas>
-                    <script src="qr.js"></script>
-        
-                    <script>
-                        var qr;
-                        (function() {
-                                qr = new QRious({
-                                element: document.getElementById('qr-code'),
-                                size: 100,
-                                foreground: '#000',
-                                background: 'transparent',
-                                value: window.location.href 
-                            });
-                        })();
-                    </script>
+                        <canvas id="qr-code" style="align-content: center  ;"></canvas>
+                        <script src="qr.js"></script>
+            
+                        <script>
+                            var qr;
+                            (function() {
+                                    qr = new QRious({
+                                    element: document.getElementById('qr-code'),
+                                    size: 100,
+                                    foreground: '#000',
+                                    background: 'transparent',
+                                    value: window.location.href 
+                                });
+                            })();
+                        </script>
+                    
                 </div>
-                
             </div>
         </div>
+    </div>
+    <h1  style="font-family: arial; ; font-size: 4em; opacity: 0.5; color: white; text-align: center;" >//INCARTI</h1>
+
 </div>
 
 <!-- End Document

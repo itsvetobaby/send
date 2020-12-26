@@ -56,15 +56,15 @@ a{
 
 a button,button,input[type="submit"],input[type="reset"],input[type="button"] {
     text-align: center;
-    background: none;
+    background: red;
     color: #000000;
     font-family: 'Open Sans', sans-serif;
     padding: 10px;
-    border: 7px solid rgb(0, 0, 0);
-    border-radius: 20px;
+    border: none;
+    width: 10em;
+    border-radius: 5px;
     cursor: pointer;
     color: #000000;
-    width: 100%;
     margin-top: -70px;
 }
 
@@ -166,4 +166,10 @@ textarea, select, input {
 
 hr{
     background-color: black;
+}
+
+.column, .columns {
+    width: 50%;
+
+
 }
