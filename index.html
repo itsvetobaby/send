@@ -24,7 +24,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-    <div class="container" style="background-color: white; padding-top: 3em; padding-bottom: 12em; border-radius: 20px; margin-top: -2em;">
+    <div class="container" style="background-color: white; padding-top: 3em; padding-bottom: 7em; border-radius: 20px; margin-top: -2em;">
 
 
             <div class="info">
@@ -46,7 +46,7 @@
     
                     <h3 id="wallet"></h3>
                    
-                    <h3 id="price" ></h3><hr>
+                    <h3></h3><h3 id="price" ></h3><hr>
                         <div id="meta" style="display:none; text-transform: uppercase;"> 
                             
                             <p id="time" style="font-family: Arial, Helvetica, sans-serif;"> <span id="lastUpdated"></span></p>
@@ -258,7 +258,7 @@
                             window.web3 = new Web3(web3.currentProvider)
                             initPayButton()
                         } else {
-                            $('#status').html('No Metamask (or other Web3 Provider) installed')
+                            $('#status').html('ERR1')
                         }
                         })
                     
